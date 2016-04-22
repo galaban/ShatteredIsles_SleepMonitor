@@ -144,6 +144,11 @@ function promptCheck(rName, rLine, rWildcards, rStyles)
     if (quickstart == false and (os.time()-lastChangeTime) < REPOPTIME) then
         return
     end
+    -- no healing needed, apparently.
+    if (quickstart == true and (os.time()-lastChangeTime) > (REPOPTIME * 2)) then
+        healingComplete()
+        return
+    end
 
     -- OK, here's how this beast works:
     -- We look at a number and compare it to the previous value.
@@ -206,7 +211,7 @@ end
 
 function stopSleeping()
     EnableTriggerGroup("SleepMonitor",false)
-    EnableTimer("SleepTimer", true)
+    EnableTimer("SleepTimer", false)
 end
 
 
