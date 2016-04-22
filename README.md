@@ -7,6 +7,9 @@ I, personally, watch for the broadcast and use it to play a sound.
 
 If you wish to modify it, just look for the "healingComplete()" function and modify that to do what you want to do.
 
+## Requirements
+For this to work, you must have a prompt that contains a > character (preferably at the end).  Also, you must end your prompt with a new line character (%B) to insure that the plugin picks it up.
+
 ## To install
 1. Download the raw file from github:
 https://raw.github.com/galaban/ShatteredIsles_SleepMonitor/master/Galabans_SleepMonitor.xml
